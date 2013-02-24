@@ -9,7 +9,8 @@ class php
         "php-apc", 
         "php5-mcrypt", 
         "php5-gd", 
-        "php5-curl"
+        "php5-curl",
+        "libapache2-mod-php5"
     ]
     
     package 
