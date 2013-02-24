@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-    ServerAdmin info@inventis.be
+    ServerAdmin root@localhost
 
     DocumentRoot /vagrant/src
 
