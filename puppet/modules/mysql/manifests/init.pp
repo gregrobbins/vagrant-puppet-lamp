@@ -1,24 +1,24 @@
-class mysql 
+class mysql
 {
     $mysqlPassword = "root"
- 
-    package 
-    { 
+
+    package
+    {
         "mysql-server":
             ensure  => present,
             require => Exec['apt-get update']
     }
 
-    service 
-    { 
+    service
+    {
         "mysql":
             enable => true,
             ensure => running,
             require => Package["mysql-server"],
     }
 
-    exec 
-    { 
+    exec
+    {
         "set-mysql-password":
             unless => "mysqladmin -uroot -p$mysqlPassword status",
             command => "mysqladmin -uroot password $mysqlPassword",

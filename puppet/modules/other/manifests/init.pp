@@ -1,7 +1,7 @@
-class other 
+class other
 {
-    package 
-    { 
+    package
+    {
         "curl":
             ensure  => present,
             require => Exec['apt-get update']

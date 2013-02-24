@@ -1,9 +1,9 @@
-class bootstrap 
+class bootstrap
 {
-    group 
-    { 
-        "puppet": 
-            ensure => "present", 
+    group
+    {
+        "puppet":
+            ensure => "present",
     }
 
     if $virtual == "virtualbox" and $fqdn == '' {

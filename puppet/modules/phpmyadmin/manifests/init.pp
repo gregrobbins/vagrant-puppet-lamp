@@ -1,7 +1,7 @@
-class phpmyadmin 
+class phpmyadmin
 {
-    package 
-    { 
+    package
+    {
         "phpmyadmin":
             ensure  => present,
             require => [
@@ -9,13 +9,13 @@ class phpmyadmin
                 Package["php5", "php5-mysql", "apache2"],
             ]
     }
-  
-    file 
-    { 
+
+    file
+    {
         "/etc/apache2/conf.d/phpmyadmin.conf":
             ensure => link,
             target => "/etc/phpmyadmin/apache.conf",
             require => Package['apache2'],
             notify => Service["apache2"]
-    }  
+    }
 }
