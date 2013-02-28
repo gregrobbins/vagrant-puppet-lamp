@@ -1,5 +1,6 @@
 <VirtualHost *:80>
     ServerAdmin root@localhost
+    ServerName magento.dev
 
     DocumentRoot /vagrant/src
 

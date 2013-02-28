@@ -21,5 +21,8 @@ Vagrant::Config.run do |config|
         end
 
         mag_config.vm.provision :shell, :path => "puppet/scripts/enable_remote_mysql_access.sh"
+        mag_config.vm.provision :shell, :path => "puppet/scripts/setup_magento_db.sh"
+        mag_config.vm.share_folder("magento-var", "/vagrant/src/var", "./src/var", :extra => 'dmode=777,fmode=777')
+        mag_config.vm.share_folder("magento-media", "/vagrant/src/media", "./src/media", :extra => 'dmode=777,fmode=777')
     end
 end
